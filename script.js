@@ -3,13 +3,13 @@ const newGridBtn = document.querySelector('.new-grid-btn');
 const clearGridBtn = document.querySelector('.clear-grid-btn');
 
 newGridBtn.addEventListener('click', createGrid);
-clearGridBtn.addEventListener('click', clearColor);
+clearGridBtn.addEventListener('click', clearGrid);
 
 
 function createGrid(){
 
     removeAllChildNodes(canvasDiv);
-
+    
     let numOfPixels = prompt('New Grid Size');
     numOfPixels = +numOfPixels;
     canvasDiv.setAttribute('style', `grid-template-columns: repeat(${numOfPixels}, auto)`);
@@ -33,8 +33,8 @@ function changeColor() {
     this.setAttribute('style', `background-color: rgb(${r} ${g} ${b})`);
 }
 
-function clearColor() {
-    
+function clearGrid() {
+
     let pixels = document.getElementsByClassName('pixel');
 
     Array.from(pixels).forEach(div => {

@@ -3,11 +3,12 @@
     width: 600px;
     height: 600px;
     border: 2px solid black;
-    background-color: rgb(194, 194, 194);
+    filter: brightness(1);
 }
 
 .pixel {
     border: 1px solid red;
+    filter: brightness(1);
 }
 
 .pixel:hover {
